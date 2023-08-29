@@ -36,6 +36,15 @@ We will select those keys and inject to our environment file.
    FIREBASE_PRIVATE_KEY=<YOUR_PRIVATE_KEY>
    FIREBASE_PROJECT_ID=<YOUR_FIREBASE_PROJECT>
    ```
+   You can print the key from the json using the `jq` command
+   ```bash
+   $ cat <your_firebase_private_key_file>.json | jq '{project_id, private_key, client_email}'
+   {
+      "project_id": "<YOUR_PROJECT_ID>",
+      "private_key": "<YOUR_PRIVATE_KEY>",
+      "client_email": "<YOUR_CLIENT_EMAIL>"
+   }
+   ```
 5. Save the file and restart the api server via:
    ```bash
    $ pnpm --filter api run start:dev
