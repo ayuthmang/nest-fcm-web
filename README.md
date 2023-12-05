@@ -28,7 +28,7 @@ After finished setup Firebase project and get private key file.
 We will select those keys and inject to our environment file.
 
 1. Open the recently loaded private key file.
-2. Go to the `apps/api` folder.
+2. Go to the `apps/backend` folder.
 3. Copy the `.env.example` to `.env`
 4. Replacing these keys:
    ```bash
@@ -48,7 +48,7 @@ We will select those keys and inject to our environment file.
 5. Save the file and restart the api server via:
    ```bash
    $ pnpm --filter api run start:dev
-   # or 
+   # or
    $ cd apps/api
    $ pnpm run start:dev
    ```
